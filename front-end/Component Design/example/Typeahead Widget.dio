@@ -1,0 +1,254 @@
+<mxfile host="65bd71144e">
+    <diagram id="DsMYq3YZ2agmJGqwz92d" name="Page-1">
+        <mxGraphModel dx="678" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="&lt;h1&gt;System Design Plan&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;General Requirements&lt;/li&gt;&lt;li&gt;Non-functional Requirements&lt;/li&gt;&lt;li&gt;Compnents Architecture&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;High-level mock up&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Dependency graph&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Props Design&lt;/li&gt;&lt;li&gt;Store Deisgn&lt;/li&gt;&lt;li&gt;Optimization&lt;/li&gt;&lt;li&gt;Accessibility&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="10" width="260" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="General Requirements" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="10" width="385" height="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;ol&gt;&lt;li&gt;Widget provides search items based on the query user typed in&lt;/li&gt;&lt;li&gt;The search results should be customizable&lt;/li&gt;&lt;li&gt;Widget can work with any data format with static or async data&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="5">
+                    <mxGeometry x="-15" y="25" width="400" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Non-functional Requirements" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="170" width="385" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;ol&gt;&lt;li&gt;Network efficiency&lt;/li&gt;&lt;li&gt;Performance Optimized&lt;/li&gt;&lt;li&gt;Widget should be configurable&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Cache Size&lt;/li&gt;&lt;li&gt;Filter function&lt;/li&gt;&lt;li&gt;Item representation&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Widget should be responsive and accessible from keyboard&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="7">
+                    <mxGeometry x="-15" y="10" width="380" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;" edge="1" parent="1" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="455" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="Component Architecture" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="390" width="680" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Search Suggestions Component" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="11">
+                    <mxGeometry x="40" y="70" width="235" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="12">
+                    <mxGeometry x="15" y="40" width="205" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Search Input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="12">
+                    <mxGeometry x="25" y="50" width="185" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Result 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="12">
+                    <mxGeometry x="25" y="90" width="185" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Result 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="12">
+                    <mxGeometry x="25" y="130" width="185" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Result 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="12">
+                    <mxGeometry x="25" y="165" width="185" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Dependency Tree" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="11">
+                    <mxGeometry x="310" y="40" width="340" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;" edge="1" parent="19" source="20" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Search Suggestions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+                    <mxGeometry x="190" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;" edge="1" parent="19" source="21" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Suggestion List" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+                    <mxGeometry x="190" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Suggestion Result" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+                    <mxGeometry x="190" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;" edge="1" parent="19" source="23" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Search Input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="19">
+                    <mxGeometry x="40" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Props Design" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="800" width="330" height="175" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Type Props&amp;lt;t&amp;gt; = {&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;getResults (query: string) =&amp;gt; Promise&amp;lt;T[]&amp;gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;minSize: number = 5&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;maxSize: number = 10&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;renderItem: (datum) =&amp;gt; HTMLElement&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;updateItem?: (el: HTMLElement) =&amp;gt; void&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;className: string&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;cacheSize: number =5&lt;br&gt;}" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="28">
+                    <mxGeometry x="10" y="25" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Store Design" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="535" width="300" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="ResultMap: Map&amp;lt;string, T[]&amp;gt;&lt;br&gt;cacheSize: number&lt;br&gt;minSize: number&lt;br&gt;maxSize: number&lt;br&gt;template: (datum: T) =&amp;gt; HTMLElement&lt;br&gt;onQuery: (query:String, data: T[]) =&amp;gt; Promise&amp;lt;T&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="31">
+                    <mxGeometry x="10" y="35" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Data" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="585" y="535" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Datum" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="635" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;entryX=-0.001;entryY=0.136;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="21" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;entryX=0.001;entryY=0.719;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="22" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;entryX=-0.008;entryY=0.853;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="20" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="Optimization" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="40" width="1440" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=none;html=1;" edge="1" parent="40" source="41" target="42">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" style="edgeStyle=none;html=1;" edge="1" parent="40" source="41" target="44">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=none;html=1;" edge="1" parent="40" source="41" target="74">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" style="edgeStyle=none;html=1;" edge="1" parent="40" source="41" target="89">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Network" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="180" y="47.5" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="minify code" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="60" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;" edge="1" parent="40" source="44" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" style="edgeStyle=none;html=1;" edge="1" parent="40" source="44" target="92">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Debounce" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="310" y="132.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" style="edgeStyle=none;html=1;" edge="1" parent="40" source="45" target="48">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=none;html=1;" edge="1" parent="40" source="45" target="49">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" style="edgeStyle=none;html=1;" edge="1" parent="40" source="45" target="50">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Cache" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="320" y="212.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="Server Cache" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="180" y="312.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Browser Cache" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="320" y="312.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=none;html=1;" edge="1" parent="40" source="50" target="55">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Widget Cache" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="470" y="312.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Clear Cache" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="470" y="392.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=none;html=1;" edge="1" parent="40" source="58" target="59">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" style="edgeStyle=none;html=1;" edge="1" parent="40" source="58" target="67">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Render" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="600" y="47.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=none;html=1;" edge="1" parent="40" source="59" target="61">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="DOM" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="470" y="132.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" style="edgeStyle=none;html=1;" edge="1" parent="40" source="61" target="63">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" style="edgeStyle=none;html=1;" edge="1" parent="40" source="61" target="65">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="Virtualization" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="470" y="212.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="Maintain constant number of nodes" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="610" y="212.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="Update node data instead of dleting and inserting" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="610" y="292.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" style="edgeStyle=none;html=1;" edge="1" parent="40" source="67" target="69">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=none;html=1;" edge="1" parent="40" source="67" target="76">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="881.25" y="212.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="67" value="CSS" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="740" y="132.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" style="edgeStyle=none;html=1;" edge="1" parent="40" source="69" target="72">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="CSS Animation" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="740" y="212.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="Avoid reflow" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="740" y="292.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" style="edgeStyle=none;html=1;" edge="1" parent="40" source="74" target="87">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="Loader, placeholder, skeleton" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="320" y="47.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="CSS naming Convention" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="870" y="212.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=none;html=1;" edge="1" parent="40" source="78" target="79">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=none;html=1;" edge="1" parent="40" source="78" target="83">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="Javascript" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="930" y="35" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" style="edgeStyle=none;html=1;" edge="1" parent="40" source="79" target="81">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="Do stuff async" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="930" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Web workers for static filtering of many elements" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="1010" y="212.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="Use server filtering for larger data" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="1070" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="Error State" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="460" y="47.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="NPM Registry" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="30" y="50" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Redundent Request cancel" style="whiteSpace=wrap;html=1;" vertex="1" parent="40">
+                    <mxGeometry x="180" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="Accessibility" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1045" y="535" width="305" height="295" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="&lt;ol&gt;&lt;li&gt;Keyboard navigation&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Shortcuts for easy access&lt;/li&gt;&lt;li&gt;Tab between items&lt;/li&gt;&lt;li&gt;Select element&lt;/li&gt;&lt;li&gt;Hide results&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Visual Optimization&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Use rems in widget&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;color theme?&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Screen reader friendly&lt;/span&gt;&lt;/li&gt;&lt;ol&gt;&lt;li&gt;aria-live field&lt;/li&gt;&lt;li&gt;aria atributes and role&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/ol&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="85">
+                    <mxGeometry x="15" y="28" width="240" height="260" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,367 @@
+<mxfile host="65bd71144e">
+    <diagram id="pWYvkUzG0RTULXNV4h88" name="Page-1">
+        <mxGraphModel dx="569" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h1&gt;System Design Plan&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;General Requirements&lt;/li&gt;&lt;li&gt;Non-func Requirements&lt;/li&gt;&lt;li&gt;Component Architecture/Design&lt;/li&gt;&lt;li&gt;Props Design&lt;/li&gt;&lt;li&gt;API Design&lt;/li&gt;&lt;li&gt;Store Design&lt;/li&gt;&lt;li&gt;Optimization&lt;/li&gt;&lt;li&gt;Accessibility&lt;/li&gt;&lt;li&gt;Extensibility&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="10" width="260" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;h1&gt;General Requirements&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;User can vote and revote?&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Single choice&lt;/li&gt;&lt;li&gt;Multiple choice&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Read only mode&lt;/li&gt;&lt;li&gt;Enable component customization&lt;/li&gt;&lt;ul&gt;&lt;li&gt;CSS API&lt;/li&gt;&lt;li&gt;User defined render functions&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Should be working in async/sync modes&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="10" width="280" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;h1&gt;Non-func Requirements&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Distributed by NPM&lt;/li&gt;&lt;li&gt;Embeddable integration&lt;/li&gt;&lt;li&gt;Support wide range of devices&lt;/li&gt;&lt;ul&gt;&lt;li&gt;mobile&lt;/li&gt;&lt;li&gt;tablet&lt;/li&gt;&lt;li&gt;desktop&lt;/li&gt;&lt;/ul&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="270" width="280" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Components" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="270" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="380" width="420" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Poll View (view mode)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="340" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Poll Title" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="400" width="380" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Option 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="490" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Option 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="590" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Revote" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="670" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="200" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="495" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="50" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="595" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Option 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="540" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Option 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;gradientDirection=east;fillStyle=auto;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="540" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="150" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="545" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;gradientDirection=east;fillStyle=auto;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="590" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;fillStyle=auto;fillColor=#60a917;gradientDirection=east;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="497.5" width="25" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;fillStyle=auto;fillColor=#60a917;gradientDirection=east;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="547.5" width="25" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;fillStyle=auto;fillColor=#60a917;gradientDirection=east;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="597.5" width="25" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="380" width="420" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Poll View (edit mode)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="910" y="340" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Poll Title" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="400" width="380" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Selectable Option 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="490" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Selectable&amp;nbsp;Option 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="590" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Submit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="670" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Selectable&amp;nbsp;Option 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="540" width="380" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;fillStyle=auto;fillColor=#60a917;gradientDirection=east;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="497.5" width="25" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;fillStyle=auto;fillColor=#60a917;gradientDirection=east;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="547.5" width="25" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;fillStyle=auto;fillColor=#60a917;gradientDirection=east;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+                    <mxGeometry x="800" y="597.5" width="25" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=none;html=1;" edge="1" parent="1" source="42" target="43">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=none;html=1;" edge="1" parent="1" source="42" target="52">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=none;html=1;" edge="1" parent="1" source="42" target="54">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Poll Widget" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="445" y="800" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=none;html=1;" edge="1" parent="1" source="43" target="46">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" style="html=1;" edge="1" parent="1" source="43" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Option List" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="445" y="930" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=none;html=1;" edge="1" parent="1" source="45" target="47">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="View Item" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="535" y="1040" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" style="edgeStyle=none;html=1;" edge="1" parent="1" source="46" target="47">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Option Item" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="345" y="1040" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="Render Item" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="445" y="1150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Poll TItle" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="930" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Vote/unvote Button" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="625" y="930" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;h1 style=&quot;text-align: center;&quot;&gt;Props Design&lt;/h1&gt;&lt;p style=&quot;&quot;&gt;type Poll = {&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;options: option[]&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;votedOption: option | null&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;readOnly: boolean&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;title: string&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;maxChoice: number | null&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;onVote: (data: options[]) =&amp;gt; void&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;renderEditItem: (datum: option) =&amp;gt; HTMLElement&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;renderViewItem: (datum:option) =&amp;gt; HTMLElement&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;comparator: (a,b) =&amp;gt; number&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;allowRevote: boolean&lt;br&gt;&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;type Option = {&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;description: string&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;order?: number&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;votes: number&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="840" y="820" width="360" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="&lt;h1 style=&quot;&quot;&gt;API Design&lt;/h1&gt;&lt;p style=&quot;text-align: left;&quot;&gt;type PollComponent = {&lt;/p&gt;&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;init(props:pollProps): void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;destroy(): void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;text-align: left;&quot;&gt;}&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1200" y="800" width="190" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;h1 style=&quot;text-align: center;&quot;&gt;State Design&lt;/h1&gt;&lt;p style=&quot;&quot;&gt;type Poll = {&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;options: option[]&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;votedOption: option | null&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;readOnly: boolean&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;title: string&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;maxChoice: number | null&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;onVote: (data: options[]) =&amp;gt; void&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;renderEditItem: (datum: option) =&amp;gt; HTMLElement&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;renderViewItem: (datum:option) =&amp;gt; HTMLElement&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;comparator: (a,b) =&amp;gt; number&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;selectedOptions: options[]&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;votedOptions: options[]&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;loading: boolean&lt;br&gt;&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;type Option = {&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;id: string&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;description: string&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;order?: number&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;voted: boolean&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;votes: number&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1210" y="1010" width="320" height="590" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="options" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="885" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="option" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="385" y="1005" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="option" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="1000" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="option" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="1110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="title" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="865" width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="onVote" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="860" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="Optimization" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="1990" y="320" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=none;html=1;" edge="1" parent="1" source="72" target="74">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=none;html=1;" edge="1" parent="1" source="72" target="82">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" style="edgeStyle=none;html=1;" edge="1" parent="1" source="72" target="106">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="Network" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1670" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=none;html=1;" edge="1" parent="1" source="74" target="75">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="Minify css/js" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1670" y="547.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" style="edgeStyle=none;html=1;" edge="1" parent="1" source="75" target="76">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="gzip" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1670" y="660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" style="edgeStyle=none;html=1;" edge="1" parent="1" source="76" target="80">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="Brotli" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1670" y="780" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="CDN&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1670" y="895" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" style="edgeStyle=none;html=1;" edge="1" parent="1" source="82" target="84">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="ES5/ES6" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1490" y="550" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=none;html=1;" edge="1" parent="1" source="84" target="86">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" style="edgeStyle=none;html=1;" edge="1" parent="1" source="84" target="87">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" style="edgeStyle=none;html=1;" edge="1" parent="1" source="84" target="88">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="Split bundles" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1490" y="660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="Core" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1320" y="660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="Theme" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1390" y="770" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="Utility" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1530" y="770" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" style="edgeStyle=none;html=1;" edge="1" parent="1" source="92" target="93">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" style="edgeStyle=none;html=1;" edge="1" parent="1" source="92" target="98">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Rendering" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2000" y="420" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" style="edgeStyle=none;html=1;" edge="1" parent="1" source="93" target="96">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" style="edgeStyle=none;html=1;" edge="1" parent="1" source="93" target="102">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" style="edgeStyle=none;html=1;" edge="1" parent="1" source="93" target="106">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="DOM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1920" y="547.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="render the HTML elements once and just update data on rerender" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1820" y="660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" style="edgeStyle=none;html=1;" edge="1" parent="1" source="98" target="100">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" style="edgeStyle=none;html=1;" edge="1" parent="1" source="98" target="102">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="CSS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2130" y="550" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="CSS naming strategy" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2190" y="660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="CSS Animation" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2030" y="660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="Skeleton, placeholder , loader" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1840" y="450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" style="edgeStyle=none;html=1;" edge="1" parent="1" source="109" target="110">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="Javascript" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2420" y="420" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="Event Delegation" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2420" y="522.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="&lt;h1 style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Accessibility&lt;/span&gt;&lt;/h1&gt;&lt;h1 style=&quot;&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;&lt;ol&gt;&lt;li&gt;Using rem instead pixel&lt;/li&gt;&lt;ul&gt;&lt;li&gt;support custom browser setting&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Keyboard shortcuts&lt;/li&gt;&lt;ul&gt;&lt;li&gt;tab between options&lt;/li&gt;&lt;li&gt;vote/revote&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Using HTML5 segmatics&lt;/li&gt;&lt;ul&gt;&lt;li&gt;using form, input, buttons instead of divs&lt;/li&gt;&lt;li&gt;SEO, screen reader friendly&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;aria attributes,&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;aria-label&lt;/li&gt;&lt;li&gt;aria-description&lt;/li&gt;&lt;li&gt;aria-live&lt;/li&gt;&lt;li&gt;screen reader friendly&lt;/li&gt;&lt;/ul&gt;&lt;/ol&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1850" y="1120" width="320" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="Extensibility" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="2550" y="1100" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" style="edgeStyle=none;html=1;" edge="1" parent="1" source="115" target="119">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" style="edgeStyle=none;html=1;" edge="1" parent="1" source="115" target="120">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" style="edgeStyle=none;html=1;" edge="1" parent="1" source="115" target="116">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" style="edgeStyle=none;html=1;" edge="1" parent="1" source="115" target="117">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="CSS API" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2340" y="1210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="Option item" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2200" y="1300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="Readonly item" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2480" y="1290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="title" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2270" y="1410" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="button" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2430" y="1410" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="Render functions" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2690" y="1230" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="ES6 inheritance" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2690" y="1400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" style="edgeStyle=none;html=1;" edge="1" parent="1" source="127" target="128">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" style="edgeStyle=none;html=1;" edge="1" parent="1" source="127" target="142">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" style="edgeStyle=none;html=1;" edge="1" parent="1" source="127" target="144">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="Emmbeddable Integration" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2930" y="1230" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" style="edgeStyle=none;html=1;" edge="1" parent="1" source="128" target="129">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="Application" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2930" y="1310" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" style="edgeStyle=none;html=1;" edge="1" parent="1" source="129" target="133">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="Application" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2930" y="1390" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" style="edgeStyle=none;html=1;" edge="1" parent="1" source="133" target="135">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="Router" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2930" y="1470" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" style="edgeStyle=none;html=1;" edge="1" parent="1" source="135" target="137">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="Embeddable Route" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2930" y="1560" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="Poll Widget" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="2930" y="1650" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="poll_id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="3020" y="1620" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="Embed content via iframe and provice the setup script" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="3190" y="1190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="Use Provider service" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="3190" y="1290" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
