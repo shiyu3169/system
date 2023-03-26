@@ -1,0 +1,1 @@
+Here are just some notes and design I took/made for systems
