@@ -1,0 +1,24 @@
+# Apple Pay vs Google Pay
+
+## Apple Pay
+Apple Pay starts 2013. It was a novel idea then. It perfected the concept called tokenization, where only a payment token representing sensitive credit card information is needed to complete a purchase. It required close cooperation payment networks like Visa and large issuing banks, like JPMC, to build a new system to supoort the wire adoption of payment tokens. 
+
+## Google Pay
+Google Pay has been around since 2018. Before that, it was known as Android Pay, and before that Google Wallet. The branding is confusing and it appears that now Google Pay is Google Wallet again in some countries. We'll refer to the current version that uses payment tokenization as Google Pay.
+
+## How these systems work
+Both platforms start by collecting sensitive credit card information on the device. It is worth noting that both platforms claim that they do not store the PAN or primary account number on the device itself. The PAN is then sent to the respective servers over HTTPS. 
+
+At the Apple server, the credit card info is not stored anywhere. It is used to identify the payment network and the issuing bank for the credit card. To simplify, we'll refer to the payment network, like visa and the bank that issues the credit, as just the bank from here on out. The credit card info is then sent from Apple server to the bank securely over the network. The bank validates the number and returns a token called DAN (device account number). This number is uniquely generated for use by the device. The generation of the token and the mapping of the token to the PAN is usually offloaded to a TSP (token service provider). The TSP is where the most sensitive information lives. The token is then returned to the Apple server. An apple server forwards the token to the iPhone where it's stored securely in a special chip called secure element. Logically, Apple server is just a pass-through. It is as if the iPhone directly sends the credit card info to the bank in exchange for the token.
+
+For Google Pay, this process is a little bit different. By Apple the PAN is sent securely by the device to the Google server. The Google server uses the number to identify the bank. The number is then sent to the sent to the bank securely over the network. The bank validates the PAN and forwards it to the TSP for a payment token. The token is sometimes called D-PAN (device PAN). The token is then sent back to the Google server where it is forwarded to the device for safe storage. 
+
+Now there are two points worth mentioning here that are different than Apple:
+1. The token is not stored in a secure element like the Apple devices. It is stored in the wallet app itself.
+2. Apple boasts they never store the payment tokens on its servers. Google makes no such claim, and in fact, in his terms of service, it states that the payment information is stored on the servers.
+
+We explained so far how each implementation turns the credit card info into some from upon device payment token. Let's take a look at how these tokens are used to make a purchase. For the iPhone, once we click pay, the token is retrieved from the secure element and sent to the merchant's Point-of-Sale terminal over NFC (near-field communication). This is really secure because the token is sent directly from the secure element to the NFC controller on the device, where it is then transmitted to the Point-of-Sale terminal. Now from the Point-of-Sale terminal, the token is sent to the merchant's bank. The merchants bank identifies the payment network from the token, and securely routes it to the payment network. The payment network validates the token then makes it request to the TSP to detokenize it back to the original PAN. The original number is sent securely from the TSP to the bank, where the payment is authorized. 
+
+For Google Pay, the flow is similar once the payment token reaches the Point-of-Sale terminal. Now how it gets from the device to the Point-of-Sale terminal is quite different. Android devices do not store the payment token in the secure element. It instead uses something called host card emulation (HCE). With HCE, the payment token is stored in the wallet app, all retrieved at transaction time by the wallet app securely from the cloud. The NFC controller and the wallet app work together to transmit the payment token over NFC to the Point-of-Sale terminal. At that point, the rest of the transaction is the same as Apple's.
+
+To conclude, both Apple Pay and Google Pay take advantage of payment tokenization technology. Apple Pay perfected the technology and made it user-friendly and secure. Google Pay's implementation is similar. The main difference is how the payment token is stored, handled, and transmitted on the device, and how the payment token could potentially be stored on the Google servers. 
