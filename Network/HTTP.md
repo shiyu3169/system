@@ -1,0 +1,16 @@
+# HTTP
+HTTP has been around since the 90s. How has it evolved over the years? What is the latest development? 
+
+Here is the progression of the HTTP versions so far, from HTTP/1, to 1.1, to 2, and now to HTTP/3. Let's look at each one more closely. HTTP/1 came out in 1996. It is built on top of TCP. Every request to the same server requires a separate TCP connection. HTTP/1.1 soon followed in 1997. It introduced a keep-alive mechanism, so a connection could be reuse for more than a single request. The persistent connections reduce request latency because the client does not need to initiate expensive TCP three-way handshake for every request. 
+
+It's worthwhile to note that HTTP/1.1 also added HTTP pipelining. This in theory allows the client to send multiple requests before waiting for each response. The response must be received in the same order as to requests. It was tricky to implement correctly and many proxy servers in between did not handle pipelining properly. Its support was eventually removed from many web browsers.
+
+HTTP/1.1 with pipelining also suffers from an issue called head of line blocking. With head of line blocking, subsequent requests on the same connection must wait for the previous requests to complete. If a request is blocked for any reason like packet loss, all subsequent requests on the same connection are also impacted. To keep loading performance at an acceptable level, browsers normally keep multiple TCP connections to the same server and send requests to it in parallel
+
+HTTP/2 was published in 2015. HTTP/2 introduces HTTP streams, where multiple streams of requests could be sent to the same server on a single TCP connection. Unlike HTTP/1.1 pipelining, each stream is independent of each other, an it does not need to be sent or received in order. HTTP/2 solves the headline blocking issue at the application layer, but the issue still exists in the transport layer with TCP. 
+
+Also note that  HTTP/2 introduced a push capability to allow servers to send update to the clients whenever new data is available without requiring a client to poll. 
+
+HTTP/3 began as a draft in 2020, and has recently been published in June 2022. It uses a new protocol called QUIC instead of TCP as the underlying transport protocol. QUIC is based on UDP. It introduces streams as the first-class citizen at the transport layer. QUIC streams share the same QUIC connection, so no additional handshakes are required to create new ones. QUIC streams are delivered independently. In most cases, packet loss affecting one stream does not affect others. This is how QUIC eliminates the head of line blocking at the transport layer.
+
+QUIC is designed for mobile heavy internet usage. People carrying smartphones constantly switch from one network to another as they move about their day. With TCP, the handoff of one connection from one network to another is sluggish. QUIC implements a concept called connection ID, which allows connections to move between IP addresses and network interfaces quickly and reliably. Even though HTTP/3 has just been standardized, it is used by 25% of the websites and supported by many web browsers.  
