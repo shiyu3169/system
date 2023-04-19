@@ -1,0 +1,14 @@
+# Redis
+Why is Redis so fast? What fundamental design decisions did the developers make more than a decade ago that stood the test of time. Let's take a look. 
+
+Redis is a very popular in-memory database. It's rock solid, easy to use, and fast. These attributes explain why it is one of the most loved databases according to the Stack Overflow's annual developer survey. 
+
+The first reason Redis is fast is because it is an in-memory database. Memory access is several orders of magnitude faster than random disk I/O. Pure memory access provides high read and write throughput and low latency. The trade-off is that the database cannot be larger than memory. 
+
+Code-wise, in-memory data structures are also much easier to implement than the on-disk counterparts. This keeps the code simple, and it contributes to Redis' rock solid stability. 
+
+Another reason Redis is fast is a bit unintuitive. It is primarily single threaded. Why would a single threaded design lead to high performance? Wouldn't it be faster if it uses threads to leverage all CPU cores? Multi-threaded applications require locks or other synchronization mechanisms. They are notoriously hard to reason about. In many applications, the added complexity is bug prone and sacrifices stability, making it difficult to justify the performance gain. In the case of Redis, the single threaded code path is easy to understand. 
+
+How does a single threaded codebase handle many thousands of incoming requests and outgoing responses at the same time? Won't the thread get blocked waiting for the completion of each request individually? Now, this is where I/O multiplexing comes into the picture. With I/O multiplexing, the operating system allows a single thread to wait on many socket connections simultaneously. Traditionally, this is done with the select or poll system calls. These system calls are not very performant when there are many thousands of connections. On linux, Epoll is a performant variant of I/O multiplexing that supports many many thousands of connections in constant time. A drawback of this single threaded design is that it does not leverage all the CPU cores available in modern hardware. For some workloads, it is not uncommon to have several Redis instances running on a single server to utilize more CPU cores. 
+
+We alluded to the third reason why Redis is fast. Since Redis is an in-memory database, it could leverage several efficient low-level data structures without worrying about how to persist them to disk efficiently - linked list skip list and hash table are some examples. It is true that there are attempts at implementing new Redis compatible servers to squeeze more performance out of a single server. With Redis ease of use, rock solid stability, and performance, it is in our view that Redis still provides the best performance and stability tradeoff in the market.
