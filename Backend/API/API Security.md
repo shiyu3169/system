@@ -31,3 +31,27 @@ API keys are common way to authenticate an server to serve service communication
 ## Rate limiting
 
 Another important security measure is rate limiting which controls the number of requests a client can make within a given time period. This helps protect our apis from being overwhelmed by malicious actors or buggy clients making excessive requests. Rate limiting rules can based on various factors like IP address, user ID, or API key. We can also have different rate limits for different types of requests or resources. For example, we might allow more read requests than write requests per second. Rate limiting improves security and helps maintain the performance and availability of your APIs.
+
+## API Versioning
+
+API versioning is a best practice that allows us to evolve the API overtime while maintaining backward compatibility. With versioning, we can introduce breaking changes or new features without disrupting existing clients. This is typically done by including the version number in the API endpoint url. Client can then choose which version to use, and we can deprecate older versions when ready. Versioning also helps with better change management and documentation. As each version can have it's own set of requirements and specifications.
+
+## AlowListing
+
+AlowListing is a security technique where it will explicitly allow access only to a predefined set of trusted entities, such as IP addresses, user IDs or API keys. Everything else is denied by default. This appoach follows the principle of "deny all", which is more secure than a DenyListing approach where we deny a few known bad actors and allow everyone else. In the context of APIs, we can implement AllowListing ruloes based on various criteira, such as allopwing only specific IP randers to access certain endpoints or limiting access to certain resources based on user roles or permissions.
+
+## OWASP
+
+The open web application security project provides valuable reousrces and guidelines for web applicaion security including API secruity. OWASP has identified documented the top 10 critical seurity risk for apis, such as broken object level authorization, security misconfiguration, and more. It's essential to review and address this risk during the design and development phases of our API to ensure a secure FOundation. We can leverage OWASP resources, such as the API security top 10 list to access our API vulnerabilities and imprement appropriate counter measures.
+
+## API Gateway
+
+An API Gateway access a single entry point for clients to access our backend services and apis. It provides a centralized layer for enforcing security policies where limiting authentication and other coresscutting converns. By using an API Gateway, we can abstract away the complexity of managing these security features across individual services or apis. API Gateway also offer additional benefits like traffic management, caching, logging, and monitoring. Making them a valuable component in mordern application architectures.
+
+## Error handling
+
+Proper error handling is crucial for API security and user experience. When errors occur, we want to provide clients with descriptive yet secure error messages. For example, instead of a vague internal server error, a good error message could be "fail to retrieve user data, please check that you are authenticated and have sufficient permissions". This gives the client enough information to troubleshoot without exposing sensitive details. For instance, instead of an error message exposing that we using SQL and there may be an ejection vulnerability by saying something like "SQL query failed due to malformed input containing a DROP TABLE command", a better approach would be a generic "invalid input provided. Please review and try again". It's generally good to categorize error as client errors, such as validation failures or server errors, and return appropriate status codes like 400 bad request or 500 internal server error. Never ever return full stack traces or expose internal error message or codes in production, as this can be valuable information for attackers. The goal is to help legitimate clients while protecting sensitive information and attack vectors.
+
+## Input Validation
+
+The final tip is to implement robust input validation for all data received from clients. This includes validating request parameters, headers, payloads, and any other user supply inputs. Failing to validate input can lead to various vulnerability, like SQL injection, cross-site scripting attack, and other injection attacks. Input validation should be done on both the client side and the server side. As client side validation alone is not sufficient. On the server side, we can use dedicated input validation libraies or frameworks to enforce strict validation rules and sanitize user input. It's also a good practice to centralize and standardize our validation logic either though an API Gateway or a separate validation service.
